@@ -1,0 +1,66 @@
+step 1: connect to the server that youre working with 
+
+Ex: localhost 27017 or localhost 27...7 so on
+
+
+// Creating the database for shoping malls
+create db shopping_mall;
+// creating database
+
+//using the databse
+use db(shopping_mall);
+
+
+db.createCollection("Products");
+//creating the shopping mall collection 
+
+
+db.Store.insert(
+    {
+        "Mall_name":"Titan_World",
+         "City_name":"Bengaluru",
+         "Store":"Hyd,Benga",
+         "gift_card":yes
+
+        
+    }
+);
+
+
+
+
+
+db.Store.insertMany(
+   [  { 
+         "Mall_name":"Titan_World1",
+         "City_name":"Bengaluru",
+         "Store":"Store1",
+        "gift_card":false,
+
+       
+    },
+    {  
+          "Mall_name":"Titan_World2",
+         "City_name":"Bengaluru",
+         "Store":"Store2",
+         "gift_card":false
+
+        
+    },
+    {
+       "Mall_name:Titan_World3",
+       "City_name":"Store3",
+        "gift_card":True
+
+       
+    },
+   ]
+)
+
+
+db.store.find({"giftcard" :"True"});
+db.store.find().limit(1);
+db.store.find({ "Mall_name": "Titan_World3"});
+db.store.find({ "Store": "Store3"});
+
+
