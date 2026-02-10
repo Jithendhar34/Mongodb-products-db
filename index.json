@@ -62,5 +62,10 @@ db.store.find({"giftcard" :"True"});
 db.store.find().limit(1);
 db.store.find({ "Mall_name": "Titan_World3"});
 db.store.find({ "Store": "Store3"});
-
+if (products.length > 0) {
+    db.giftcard.insertOne({
+      Mall_name: Mall.Mall_name,
+      city: mall.city,
+      state: mall.state,
+})
 
